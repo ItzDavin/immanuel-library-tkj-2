@@ -90,7 +90,6 @@
                     <a href="../../actions/books/destroy.php?id=<?= $book['id'] ?>" 
                     onclick="return confirm('Yakin mau hapus buku ini?')" 
                     class="btn btn-danger btn-sm">Hapus</a>
-                    
                   </div>
                 </td>
               </tr>
