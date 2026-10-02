@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="../../styles/authors/create.css">
 </head>
 <body>
+  <?php
+  require_once __DIR__ . '/../../repositories/author-repository.php';
+  $categories = getCategories();
+  ?>
+
   <div class="app-shell">
    <?php require_once('../../components/admin/sidebar.php'); ?>
 
