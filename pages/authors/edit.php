@@ -10,14 +10,12 @@
 
 <body>
   <?php
-  $author = [
-    "id" => 1,
-    "name" => "Andrea Hirata",
-    "bio" => "Penulis asal Belitung, dikenal lewat novel Laskar Pelangi.",
-  ];
+   require_once __DIR__ . '/../../repositories/author-repository.php';
+  $author = getAuthor();
   ?>
   <div class="app-shell">
-    <?php require_once('../../components/admin/sidebar.php'); ?>
+    <?php require_once('../../components/admin/sidebar.php'); 
+    ?>
 
     <main class="app-main">
       <?php
@@ -27,7 +25,7 @@
       ?>
 
       <div class="app-content">
-        <form method="" action="">
+        <form method="get" action="../../actions/authors/update.php">
           <input type="hidden" name="id" value="<?= $author['id'] ?>">
           <div class="form-card">
             <div class="form-section-title">Data Penulis</div>
@@ -41,7 +39,7 @@
             </div>
             <div class="form-actions">
               <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+              <button name="update" type="submit" class="btn btn-primary">Simpan Perubahan</button>
             </div>
           </div>
         </form>
